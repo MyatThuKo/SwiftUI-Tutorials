@@ -12,14 +12,24 @@ struct TaskListView: View {
     
     let tasks = testDataTasks
     
+    @State var presentAddNewItem = false
+    
     var body: some View {
         NavigationView{
             VStack(alignment: .leading) {
-                List(taskListVM.taskCellViewModel) { taskCellVM in
-                    TaskCell(taskCellVM: taskCellVM)
+                List {
+                    ForEach(taskListVM.taskCellViewModel) { taskCellVM in
+                        TaskCell(taskCellVM: taskCellVM)
+                    }
+                    if presentAddNewItem {
+                        TaskCell(taskCellVM: TaskCellViewModel(task: Task(title: "", completed: false))) { task in
+                            self.taskListVM.addTask(task: task)
+                            presentAddNewItem.toggle()
+                        }
+                    }
                 }
                 Button(action: {
-                    print("Add new task")
+                    presentAddNewItem.toggle()
                 }) {
                     HStack {
                         Image(systemName: "plus.circle.fill")
@@ -43,12 +53,21 @@ struct ContentView_Previews: PreviewProvider {
 struct TaskCell: View {
     @ObservedObject var taskCellVM: TaskCellViewModel
     
+    var onCommit: (Task) -> (Void) = { _ in
+        
+    }
+    
     var body: some View {
         HStack {
             Image(systemName: taskCellVM.task.completed ? "checkmark.circle.fill" : "circle")
                 .resizable()
                 .frame(width: 25, height: 25)
-            Text(taskCellVM.task.title)
+                .onTapGesture {
+                    self.taskCellVM.task.completed.toggle()
+                }
+            TextField("Enter the task title", text: $taskCellVM.task.title, onCommit: {
+                self.onCommit(self.taskCellVM.task)
+            })
         }
     }
 }
