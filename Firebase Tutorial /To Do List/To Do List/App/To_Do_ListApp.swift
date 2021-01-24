@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct To_Do_ListApp: App {
@@ -13,5 +14,15 @@ struct To_Do_ListApp: App {
         WindowGroup {
             TaskListView()
         }
+    }
+}
+
+// AppDeleagate.swift
+class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        FirebaseApp.configure()
+        
+        return true
     }
 }
