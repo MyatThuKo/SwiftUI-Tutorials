@@ -10,17 +10,38 @@ import FirebaseFirestore
 import FirebaseFirestoreSwift
 
 class TaskRepository: ObservableObject {
+    
     let db = Firestore.firestore()
     
     @Published var tasks = [Task]()
+    
+    init() {
+        loadData()
+    }
     
     func loadData() {
         db.collection("tasks").addSnapshotListener { (querySnapshot, error) in
             if let querySnapshot = querySnapshot {
                 self.tasks = querySnapshot.documents.compactMap { document in
-                    try? document.data(as: Task.self)
+                    do {
+                        let task = try document.data(as: Task.self)
+                        return task
+                    }
+                    catch {
+                        fatalError("Unable to read data: \(error.localizedDescription)")
+                    }
+                    return nil
                 }
             }
+        }
+    }
+    
+    func addTask(_ task: Task) {
+        do {
+            let _ = try db.collection("tasks").addDocument(from: task)
+        }
+        catch {
+            fatalError("Unable to encode task: \(error.localizedDescription)")
         }
     }
 }

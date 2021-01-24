@@ -10,19 +10,14 @@ import Firebase
 
 @main
 struct To_Do_ListApp: App {
+    //Initializer to call the FirebaseApp.configure()
+    init() {
+        FirebaseApp.configure()
+    }
+    
     var body: some Scene {
         WindowGroup {
             TaskListView()
         }
-    }
-}
-
-// AppDeleagate.swift
-class AppDelegate: UIResponder, UIApplicationDelegate {
-    
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        FirebaseApp.configure()
-        
-        return true
     }
 }
