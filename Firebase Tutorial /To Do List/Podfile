@@ -8,5 +8,6 @@ target 'To Do List' do
   # Pods for To Do List
   pod 'Firebase/Auth'
   pod 'Firebase/Analytics'
-
+  pod 'Firebase/Firestore'
+  pod 'FirebaseFirestoreSwift', '~> 7.0-beta'
 end
