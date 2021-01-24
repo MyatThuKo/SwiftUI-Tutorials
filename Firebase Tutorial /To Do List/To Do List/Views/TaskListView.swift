@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct TaskListView: View {
+    @ObservedObject var taskListVM = TaskListViewModel()
+    
     let tasks = testDataTasks
     
     var body: some View {
         NavigationView{
             VStack(alignment: .leading) {
-                List(tasks) { task in
-                    TaskCell(task: task)
+                List(taskListVM.taskCellViewModel) { taskCellVM in
+                    TaskCell(taskCellVM: taskCellVM)
                 }
                 Button(action: {
                     print("Add new task")
@@ -39,13 +41,14 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 struct TaskCell: View {
-    var task: Task
+    @ObservedObject var taskCellVM: TaskCellViewModel
+    
     var body: some View {
         HStack {
-            Image(systemName: task.completed ? "checkmark.circle.fill" : "circle")
+            Image(systemName: taskCellVM.task.completed ? "checkmark.circle.fill" : "circle")
                 .resizable()
                 .frame(width: 25, height: 25)
-            Text(task.title)
+            Text(taskCellVM.task.title)
         }
     }
 }
