@@ -13,6 +13,7 @@ struct To_Do_ListApp: App {
     //Initializer to call the FirebaseApp.configure()
     init() {
         FirebaseApp.configure()
+        Auth.auth().signInAnonymously()
     }
     
     var body: some Scene {
