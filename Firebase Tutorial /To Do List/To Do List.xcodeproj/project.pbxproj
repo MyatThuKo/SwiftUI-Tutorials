@@ -17,6 +17,8 @@
 		E22170FF25BD264500473592 /* TaskListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22170FE25BD264500473592 /* TaskListViewModel.swift */; };
 		E221710225BD2CA500473592 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E221710125BD2CA500473592 /* GoogleService-Info.plist */; };
 		E221714A25BE2F2100473592 /* TaskRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E221714925BE2F2100473592 /* TaskRepository.swift */; };
+		E221719025BE71FC00473592 /* SignInWithAppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E221718F25BE71FC00473592 /* SignInWithAppleButton.swift */; };
+		E221719325BE72C700473592 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E221719225BE72C700473592 /* SignInView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		E22170FE25BD264500473592 /* TaskListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewModel.swift; sourceTree = "<group>"; };
 		E221710125BD2CA500473592 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E221714925BE2F2100473592 /* TaskRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRepository.swift; sourceTree = "<group>"; };
+		E221718F25BE71FC00473592 /* SignInWithAppleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleButton.swift; sourceTree = "<group>"; };
+		E221719225BE72C700473592 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		E8635292BE71054ED61E9600 /* Pods_To_Do_List.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_To_Do_List.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBA559E7CE9589F8985ED3B7 /* Pods-To Do List.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-To Do List.release.xcconfig"; path = "Target Support Files/Pods-To Do List/Pods-To Do List.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,6 +123,8 @@
 			isa = PBXGroup;
 			children = (
 				E22170E025BCC9B700473592 /* TaskListView.swift */,
+				E221718F25BE71FC00473592 /* SignInWithAppleButton.swift */,
+				E221719225BE72C700473592 /* SignInView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -268,6 +274,8 @@
 				E22170FF25BD264500473592 /* TaskListViewModel.swift in Sources */,
 				E22170F025BCC9D000473592 /* Task.swift in Sources */,
 				E22170DF25BCC9B700473592 /* To_Do_ListApp.swift in Sources */,
+				E221719325BE72C700473592 /* SignInView.swift in Sources */,
+				E221719025BE71FC00473592 /* SignInWithAppleButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
