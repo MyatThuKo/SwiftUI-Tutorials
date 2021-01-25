@@ -25,6 +25,12 @@ struct SignInView: View {
                         }
                     }
                 }
+            
+            SignInWithGoogleButton()
+                .frame(width: 287, height: 45)
+                .onTapGesture {
+                    print("Sign in with Google button.")
+                }
         }
     }
 }

@@ -20,6 +20,7 @@
 		E221719025BE71FC00473592 /* SignInWithAppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E221718F25BE71FC00473592 /* SignInWithAppleButton.swift */; };
 		E221719325BE72C700473592 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E221719225BE72C700473592 /* SignInView.swift */; };
 		E221719725BE75ED00473592 /* SignInWithAppleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E221719625BE75ED00473592 /* SignInWithAppleCoordinator.swift */; };
+		E22171BE25BE86B500473592 /* SignInWithGoogleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22171BD25BE86B500473592 /* SignInWithGoogleButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		E221718F25BE71FC00473592 /* SignInWithAppleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleButton.swift; sourceTree = "<group>"; };
 		E221719225BE72C700473592 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		E221719625BE75ED00473592 /* SignInWithAppleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleCoordinator.swift; sourceTree = "<group>"; };
+		E22171BD25BE86B500473592 /* SignInWithGoogleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithGoogleButton.swift; sourceTree = "<group>"; };
 		E8635292BE71054ED61E9600 /* Pods_To_Do_List.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_To_Do_List.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBA559E7CE9589F8985ED3B7 /* Pods-To Do List.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-To Do List.release.xcconfig"; path = "Target Support Files/Pods-To Do List/Pods-To Do List.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				E22170E025BCC9B700473592 /* TaskListView.swift */,
+				E22171BD25BE86B500473592 /* SignInWithGoogleButton.swift */,
 				E221718F25BE71FC00473592 /* SignInWithAppleButton.swift */,
 				E221719225BE72C700473592 /* SignInView.swift */,
 			);
@@ -177,6 +180,7 @@
 				E22170D825BCC9B700473592 /* Frameworks */,
 				E22170D925BCC9B700473592 /* Resources */,
 				990BC46176CFB87E3ADCBD40 /* [CP] Embed Pods Frameworks */,
+				C291BABD07F2F0E13D14BAE8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,6 +254,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-To Do List/Pods-To Do List-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C291BABD07F2F0E13D14BAE8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-To Do List/Pods-To Do List-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-To Do List/Pods-To Do List-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-To Do List/Pods-To Do List-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C9A390577E44E1F0ECE6FA55 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -287,6 +308,7 @@
 				E22170F025BCC9D000473592 /* Task.swift in Sources */,
 				E22170DF25BCC9B700473592 /* To_Do_ListApp.swift in Sources */,
 				E221719325BE72C700473592 /* SignInView.swift in Sources */,
+				E22171BE25BE86B500473592 /* SignInWithGoogleButton.swift in Sources */,
 				E221719025BE71FC00473592 /* SignInWithAppleButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

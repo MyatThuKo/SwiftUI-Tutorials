@@ -10,4 +10,8 @@ target 'To Do List' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Firestore'
   pod 'FirebaseFirestoreSwift', '~> 7.0-beta'
+  
+ # Built-in UI for Sign in Buttons
+ pod 'FirebaseUI/Google'
+ pod 'GoogleSignIn'
 end
