@@ -10,14 +10,20 @@ import SwiftUI
 struct SignInView: View {
     @Environment(\.presentationMode) var presentationMode
     
+    @State var coordinator: SignInWithAppleCoordinator?
+    
     var body: some View {
         VStack {
             Text("Thank you for using To Do List app. Please sign in here.")
             SignInWithAppleButton()
                 .frame(width: 280, height: 45)
                 .onTapGesture {
-                    print("Sign in with Apple")
-                    presentationMode.wrappedValue.dismiss()
+                    if let coordinator = self.coordinator {
+                        coordinator.startSignInWithAppleFlow {
+                            print("Sign in with Apple")
+                            presentationMode.wrappedValue.dismiss()
+                        }
+                    }
                 }
         }
     }
