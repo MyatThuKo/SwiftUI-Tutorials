@@ -1,6 +1,6 @@
 import Foundation
 
-class APIService {
+public class APIService {
     public static let shared = APIService()
     
     public enum APIError: Error {
@@ -8,15 +8,13 @@ class APIService {
     }
     
     public func getJSON<T: Decodable>(urlString: String,
-                                      dateDecodingStrategy: JSONDecoder.DataDecodingStrategy = .deferredToData,
+                                      dateDecodingStrategy: JSONDecoder.DateDecodingStrategy = .deferredToDate,
                                       keyDecodingStrategy: JSONDecoder.KeyDecodingStrategy = .useDefaultKeys,
-                                      completion: @escaping (Result<T,APIError>) -> Void
-    ) {
+                                      completion: @escaping (Result<T,APIError>) -> Void) {
         guard let url = URL(string: urlString) else {
             completion(.failure(.error(NSLocalizedString("Error: Invalid URL", comment: ""))))
             return
         }
-        
         let request = URLRequest(url: url)
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let error = error {
@@ -25,12 +23,11 @@ class APIService {
             }
             
             guard let data = data else {
-                completion(.failure(.error(NSLocalizedString("Error: Data is corrupt.", comment: ""))))
+                completion(.failure(.error(NSLocalizedString("Error: Data us corrupt.", comment: ""))))
                 return
             }
-            
             let decoder = JSONDecoder()
-            decoder.dataDecodingStrategy = dateDecodingStrategy
+            decoder.dateDecodingStrategy = dateDecodingStrategy
             decoder.keyDecodingStrategy = keyDecodingStrategy
             do {
                 let decodedData = try decoder.decode(T.self, from: data)
@@ -38,7 +35,9 @@ class APIService {
                 return
             } catch let decodingError {
                 completion(.failure(APIError.error("Error: \(decodingError.localizedDescription)")))
+                return
             }
+            
         }.resume()
     }
 }
