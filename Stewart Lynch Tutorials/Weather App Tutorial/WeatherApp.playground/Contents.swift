@@ -36,7 +36,7 @@ CLGeocoder().geocodeAddressString("Paris") { (placemarks, error) in
     if let lat = placemarks?.first?.location?.coordinate.latitude,
        let lon = placemarks?.first?.location?.coordinate.longitude {
         // Don't forget to use your own key
-        apiService.getJSON(urlString: "https://api.openweathermap.org/data/2.5/onecall?lat=\(lat)&lon=\(lon)&exclude=current,minutely,hourly,alerts&appid=aad76528598202d27ee01e0d6e177783",
+        apiService.getJSON(urlString: "https://api.openweathermap.org/data/2.5/onecall?lat=\(lat)&lon=\(lon)&exclude=current,minutely,hourly,alerts&appid={Insert your API here}",
                            dateDecodingStrategy: .secondsSince1970) { (result: Result<Forecast,APIService.APIError>) in
             switch result {
             case .success(let forecast):
