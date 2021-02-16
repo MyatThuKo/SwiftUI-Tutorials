@@ -11,6 +11,7 @@
 		E26BDFB525DB72EC00A9F3F2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26BDFB425DB72EC00A9F3F2 /* ContentView.swift */; };
 		E26BDFB725DB72ED00A9F3F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E26BDFB625DB72ED00A9F3F2 /* Assets.xcassets */; };
 		E26BDFBA25DB72ED00A9F3F2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E26BDFB925DB72ED00A9F3F2 /* Preview Assets.xcassets */; };
+		E26BDFE225DB763200A9F3F2 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = E26BDFE125DB763200A9F3F2 /* Keys.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		E26BDFB625DB72ED00A9F3F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E26BDFB925DB72ED00A9F3F2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E26BDFBB25DB72ED00A9F3F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E26BDFE125DB763200A9F3F2 /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				E26BDFB625DB72ED00A9F3F2 /* Assets.xcassets */,
 				E26BDFBB25DB72ED00A9F3F2 /* Info.plist */,
 				E26BDFB825DB72ED00A9F3F2 /* Preview Content */,
+				E26BDFE125DB763200A9F3F2 /* Keys.plist */,
 			);
 			path = WeatherApp;
 			sourceTree = "<group>";
@@ -126,6 +129,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E26BDFE225DB763200A9F3F2 /* Keys.plist in Resources */,
 				E26BDFBA25DB72ED00A9F3F2 /* Preview Assets.xcassets in Resources */,
 				E26BDFB725DB72ED00A9F3F2 /* Assets.xcassets in Resources */,
 			);
