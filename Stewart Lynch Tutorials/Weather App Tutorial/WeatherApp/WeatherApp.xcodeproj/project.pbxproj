@@ -12,6 +12,8 @@
 		E26BDFB725DB72ED00A9F3F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E26BDFB625DB72ED00A9F3F2 /* Assets.xcassets */; };
 		E26BDFBA25DB72ED00A9F3F2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E26BDFB925DB72ED00A9F3F2 /* Preview Assets.xcassets */; };
 		E26BDFE225DB763200A9F3F2 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = E26BDFE125DB763200A9F3F2 /* Keys.plist */; };
+		E2E9CE9525DE0D1C003EF3F8 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E9CE9425DE0D1C003EF3F8 /* APIService.swift */; };
+		E2E9CE9825DE0D29003EF3F8 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E9CE9725DE0D29003EF3F8 /* Forecast.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		E26BDFB925DB72ED00A9F3F2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E26BDFBB25DB72ED00A9F3F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E26BDFE125DB763200A9F3F2 /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
+		E2E9CE9425DE0D1C003EF3F8 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIService.swift; path = ../../WeatherApp.playground/Sources/APIService.swift; sourceTree = "<group>"; };
+		E2E9CE9725DE0D29003EF3F8 /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			children = (
 				E26BDFB225DB72EC00A9F3F2 /* WeatherAppApp.swift */,
 				E26BDFB425DB72EC00A9F3F2 /* ContentView.swift */,
+				E2E9CE9425DE0D1C003EF3F8 /* APIService.swift */,
+				E2E9CE9725DE0D29003EF3F8 /* Forecast.swift */,
 				E26BDFB625DB72ED00A9F3F2 /* Assets.xcassets */,
 				E26BDFBB25DB72ED00A9F3F2 /* Info.plist */,
 				E26BDFB825DB72ED00A9F3F2 /* Preview Content */,
@@ -142,7 +148,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2E9CE9825DE0D29003EF3F8 /* Forecast.swift in Sources */,
 				E26BDFB525DB72EC00A9F3F2 /* ContentView.swift in Sources */,
+				E2E9CE9525DE0D1C003EF3F8 /* APIService.swift in Sources */,
 				E26BDFB325DB72EC00A9F3F2 /* WeatherAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
