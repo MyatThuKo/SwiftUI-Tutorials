@@ -10,8 +10,14 @@ import Foundation
 import SwiftUI
 
 class ForecastListViewModel: ObservableObject {
+    struct AppError: Identifiable {
+        let id = UUID().uuidString
+        let errorString: String
+    }
     
     @Published var forecasts: [ForecastViewModel] = []
+    var appError: AppError? = nil
+    @Published var isLoading: Bool = false
     @AppStorage("location") var location: String = ""
     @AppStorage("system") var system: Int = 0 {
         didSet {
@@ -28,7 +34,7 @@ class ForecastListViewModel: ObservableObject {
     }
     
     func getWeather() {
-        
+        isLoading = true
         // Getting API Key from plist
         guard let filePath = Bundle.main.path(forResource: "Keys", ofType: "plist") else {
             fatalError("Couldn't find file 'Keys.plist'.")
@@ -44,6 +50,8 @@ class ForecastListViewModel: ObservableObject {
         dateFormatter.dateFormat = "E, MMM, d"
         CLGeocoder().geocodeAddressString(location) { (placemarks, error) in
             if let error = error {
+                self.isLoading = false
+                self.appError = AppError(errorString: error.localizedDescription)
                 print(error.localizedDescription)
             }
             if let lat = placemarks?.first?.location?.coordinate.latitude,
@@ -54,11 +62,14 @@ class ForecastListViewModel: ObservableObject {
                     switch result {
                     case .success(let forecast):
                         DispatchQueue.main.async {
+                            self.isLoading = false
                             self.forecasts = forecast.daily.map {ForecastViewModel(forecast: $0, system: self.system)}
                         }
                     case .failure(let apiError):
                         switch apiError {
                         case .error(let errorString):
+                            self.isLoading = false
+                            self.appError = AppError(errorString: errorString)
                             print(errorString)
                         }
                     }
