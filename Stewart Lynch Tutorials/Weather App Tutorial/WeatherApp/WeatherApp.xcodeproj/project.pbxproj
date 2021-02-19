@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		E26BDFBA25DB72ED00A9F3F2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E26BDFB925DB72ED00A9F3F2 /* Preview Assets.xcassets */; };
 		E26BDFE225DB763200A9F3F2 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = E26BDFE125DB763200A9F3F2 /* Keys.plist */; };
 		E29CD48225DF36C9009983EF /* ForecastListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29CD48125DF36C9009983EF /* ForecastListViewModel.swift */; };
+		E29CD48625DF5A56009983EF /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = E29CD48525DF5A56009983EF /* SDWebImageSwiftUI */; };
 		E2E9CE9525DE0D1C003EF3F8 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E9CE9425DE0D1C003EF3F8 /* APIService.swift */; };
 		E2E9CE9825DE0D29003EF3F8 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E9CE9725DE0D29003EF3F8 /* Forecast.swift */; };
 		E2E9CE9B25DE1FF8003EF3F8 /* ForecastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E9CE9A25DE1FF8003EF3F8 /* ForecastViewModel.swift */; };
@@ -37,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E29CD48625DF5A56009983EF /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +102,9 @@
 			dependencies = (
 			);
 			name = WeatherApp;
+			packageProductDependencies = (
+				E29CD48525DF5A56009983EF /* SDWebImageSwiftUI */,
+			);
 			productName = WeatherApp;
 			productReference = E26BDFAF25DB72EC00A9F3F2 /* WeatherApp.app */;
 			productType = "com.apple.product-type.application";
@@ -127,6 +132,9 @@
 				Base,
 			);
 			mainGroup = E26BDFA625DB72EC00A9F3F2;
+			packageReferences = (
+				E29CD48425DF5A56009983EF /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = E26BDFB025DB72EC00A9F3F2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -348,6 +356,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E29CD48425DF5A56009983EF /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E29CD48525DF5A56009983EF /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E29CD48425DF5A56009983EF /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E26BDFA725DB72EC00A9F3F2 /* Project object */;
 }
