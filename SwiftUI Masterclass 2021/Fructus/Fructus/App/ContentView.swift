@@ -11,6 +11,7 @@ struct ContentView: View {
     // MARK: - PROPERTIES
     
     var fruits: [Fruit] = fruitData
+    @State private var isShowingSetting: Bool = false
     
     // MARK: - BODY
     
@@ -25,7 +26,18 @@ struct ContentView: View {
                 }
             }
             .navigationTitle("Fruits")
+            .navigationBarItems(trailing:
+                                    Button(action: {
+                                        isShowingSetting.toggle()
+                                    }, label: {
+                                        Image(systemName: "slider.horizontal.3")
+                                    }) //: Button
+                                    .sheet(isPresented: $isShowingSetting) {
+                                        SettingView()
+                                    }
+            )
         } //: NavigationView
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
