@@ -13,9 +13,13 @@ This is an iOS application where it shows an encyclopedia of fruits.
 
 ### Video Walkthrough
 
-Here's a walkthrough of implemented user stories:
+Here's walkthrough of implemented user stories:
 
-<img src='https://github.com/MyatThuKo/iOS-Dev-Tutorials/blob/main/SwiftUI%20Masterclass%202021/Fructus/fructus.gif' title='Video Walkthrough' width='250' alt='Video Walkthrough' />
+#### List View and Detail View Walkthrough
+<img src='https://github.com/MyatThuKo/iOS-Dev-Tutorials/blob/main/SwiftUI%20Masterclass%202021/Fructus/Gif/fructus_list_detail_view.gif' title='List View and Detail View Walkthrough' width='250' alt='List View and Detail View Walkthrough' />
+
+#### Setting View and Onboarding Screen Walkthrough
+<img src="https://github.com/MyatThuKo/iOS-Dev-Tutorials/blob/main/SwiftUI%20Masterclass%202021/Fructus/Gif/fructus_setting_onboarding_view.gif" title="Setting View and Onboarding Screen Walkthrough" width="250" alt="Setting View and Onboarding Screen Walkthrough"/>
 
 ### Tutorial Source 
 - Website: [SwiftUI Masterclass 2021](https://swiftuimasterclass.com/) 
