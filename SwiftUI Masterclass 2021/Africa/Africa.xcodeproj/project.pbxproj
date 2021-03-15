@@ -22,6 +22,7 @@
 		E292B84925FEF8DC002B7224 /* VideoPlayerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E292B84825FEF8DC002B7224 /* VideoPlayerHelper.swift */; };
 		E292B84C25FEFD0E002B7224 /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E292B84B25FEFD0E002B7224 /* LocationModel.swift */; };
 		E292B84F25FF0071002B7224 /* MapAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E292B84E25FF0071002B7224 /* MapAnnotationView.swift */; };
+		E292B85225FF05AC002B7224 /* MotionAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E292B85125FF05AC002B7224 /* MotionAnimationView.swift */; };
 		E2A9DC5525F86F11007277CF /* AfricaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A9DC5425F86F11007277CF /* AfricaApp.swift */; };
 		E2A9DC5725F86F11007277CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A9DC5625F86F11007277CF /* ContentView.swift */; };
 		E2A9DC5925F86F12007277CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2A9DC5825F86F12007277CF /* Assets.xcassets */; };
@@ -64,6 +65,7 @@
 		E292B84825FEF8DC002B7224 /* VideoPlayerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerHelper.swift; sourceTree = "<group>"; };
 		E292B84B25FEFD0E002B7224 /* LocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
 		E292B84E25FF0071002B7224 /* MapAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotationView.swift; sourceTree = "<group>"; };
+		E292B85125FF05AC002B7224 /* MotionAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionAnimationView.swift; sourceTree = "<group>"; };
 		E2A9DC5125F86F11007277CF /* Africa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Africa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2A9DC5425F86F11007277CF /* AfricaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfricaApp.swift; sourceTree = "<group>"; };
 		E2A9DC5625F86F11007277CF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 				E292B84025FEBEEA002B7224 /* VideoListItemView.swift */,
 				E292B84425FEF7A1002B7224 /* VideoPlayerView.swift */,
 				E292B84E25FF0071002B7224 /* MapAnnotationView.swift */,
+				E292B85125FF05AC002B7224 /* MotionAnimationView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				E292B83225FE9494002B7224 /* InsetGalleryView.swift in Sources */,
 				E292B84125FEBEEA002B7224 /* VideoListItemView.swift in Sources */,
 				E292B82325FD5FED002B7224 /* CodableBundleExtension.swift in Sources */,
+				E292B85225FF05AC002B7224 /* MotionAnimationView.swift in Sources */,
 				E292B82F25FE9388002B7224 /* HeadingView.swift in Sources */,
 				E292B84525FEF7A1002B7224 /* VideoPlayerView.swift in Sources */,
 			);
