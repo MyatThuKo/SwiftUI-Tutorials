@@ -1,8 +1,8 @@
 # Africa - Course 2 🦁🦒🐯 🐘 
 ## Table of Contents 
-* [General Info](#general-info)
-* [What I learned](#what-i-learned)
-* [Resources](#resources)
+* [General Info](https://github.com/MyatThuKo/iOS-Dev-Tutorials/tree/main/SwiftUI%20Masterclass%202021/Africa#general-info-)
+* [What I learned](https://github.com/MyatThuKo/iOS-Dev-Tutorials/tree/main/SwiftUI%20Masterclass%202021/Africa#what-i-learned-)
+* [Resources](https://github.com/MyatThuKo/iOS-Dev-Tutorials/tree/main/SwiftUI%20Masterclass%202021/Africa#resources--)
 
 ## General Info 🌍
 Africa iOS Application shows the information about all the wildlife of the animals habitat in Africa. In this application, we have four tabs - Home Page, Watch, Locations and Gallery. 
